@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Poppins Black';
+    src: url('fonts/Poppins-Black.ttf') format('truetype');
+}
+/*
+#272727
+#525252
+*/
+:root {
+    --mainHintergrund: black;
+    --buttonHintergrund: #3f48cc;
+    --buttonTrennung: white;
+    --textDescription: #aaaaaa;
+    --textMain: #f1f1f1;
+    --headerStrich: #303030;
+    --buttonHover: #2e36af;
+    --font: 'Poppins Black', sans-serif;
+}
+
+body {
+    background-color: var(--mainHintergrund);
+    color: var(--textMain);
+    margin: 0 auto;
+    font-family: var(--font);
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--textMain);
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: var(--mainHintergrund);
+}
+
+/* START HEADER L */
+
+.container .header .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .header .title img {
+    width: 40px;
+    border-radius: 100%;
+}
+
+.container .header .title .title-Title {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* END HEADER L */
+/* START HEADER R */
+
+.container .header .refs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container .header .refs .ref-main a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+}
+
+.container .header .refs ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container .header .refs ul li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.container .header .refs ul li {
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.container .header .refs ul li:hover {
+  transform: scale(1.2);
+}
+
+/* END HEADER R */
+/* START HEADER LINE */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--headerStrich);
+    margin: 0px 0;
+    padding: 0;
+}
+
+/* END HEADER LINE */
+/* START SECTION 1 */
+
+.sect-main {
+    width: 100%;
+    position: relative;
+    top: 150px;
+    margin: auto;
+    text-align: center;
+}
+
+.bg {
+    background-image: url('../2024_09_28_0by_Kleki.png');
+    filter: blur(10px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+.sect-main .title .sect-main-title-Title {
+    font-size: 9rem;
+    margin-top: 125px;
+    color: var(--textMain);
+}
+
+.sect-main .title .sect-main-title-Description {
+    font-size: 1.66rem;
+    margin-top: -125px;
+    letter-spacing: 5px;
+    color: var(--textDescription);
+}
+
+.sect-main .title .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+}
+
+.sect-main .title .buttons button {
+    height: 54px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--buttonHintergrund);
+    color: var(--textMain);
+    width: 133px;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:nth-child(1) {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    &:nth-child(2) {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    &:hover {
+        background-color: var(--buttonHover);
+    }
+}
+
+.sect-main .title .buttons .trennung {
+    height: 42px;
+    width: 1px;
+    background-color: var(--buttonTrennung);
+    position: relative;
+    left: 35.5px;
+    z-index: 1;
+}
+
+
+/* END SECTION 1*/
